@@ -58,7 +58,7 @@
                     <div class="listop-right">
                         <div class="sub-ava" style="width: 150px; height : 150px; text-align: center; margin: auto;">
                             <div id="last-ava" style="width: 130px; height : 130px">
-                                <img loading="lazy" src="/Fleur1.jpg" style="max-width: 200px; max-height: 400px">
+                                <img loading="lazy" src="Fleur1.jpg" style="max-width: 200px; max-height: 400px">
                             </div>
                         </div>
                     </div>
@@ -107,7 +107,7 @@
                     <div class="listop-right">
                         <div class="sub-ava" style="width: 220px; height : 220px; text-align: center; margin: auto;">
                             <div id="last-ava" style="width: 200px;  height : 200px">
-                                <img loading=" lazy" src="/cat.png" style="max-width: 200px; max-height: 400px">
+                                <img loading=" lazy" src="cat.png" style="max-width: 200px; max-height: 400px">
                             </div>
                         </div>
                     </div>
