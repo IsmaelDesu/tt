@@ -1,0 +1,633 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none !important;
+}
+
+body {
+    padding-top: 40px;
+    padding-left: 200px;
+    padding-right: 120px;
+    font-family: Poppins;
+}
+
+a {
+    text-decoration: none;
+}
+
+/**** VALEURS GENERALES ****/
+
+:root {
+    /*** couleurs des groupes ***/
+    --voyageurs: rgba(209, 182, 160);
+    --natifs: rgba(158, 158, 130);
+    --confrerie: #472466;
+    --staff: #cd9982;
+    --pnj: #8ca3b6;
+
+    /*** dégradés généraux ***/
+    --gradient1: -webkit-linear-gradient(132deg, #afc7a7, #eac7a7);
+    --gradient2: linear-gradient(45deg, #c6a567 0%, #f2ecd9 100%);
+    --gradientNatif: linear-gradient(132deg, #9e9e82, #5e6436) !important;
+    --gradientVoyageur: linear-gradient(132deg, #d1b6a0, #ebad6b) !important;
+    --gradientPnj: linear-gradient(132deg, #849dc1, #eac7a7) !important;
+    --gradientConfrerie: linear-gradient(132deg, #60246b, #971d34) !important;
+
+    /*** autres couleurs ***/
+    --cream: rgb(235, 221, 208);
+    --green: rgb(131, 144, 127);
+    --dgreen: rgb(60, 60, 48);
+    --peach: rgb(232, 184, 148);
+    --cream2: rgb(214, 190, 166);
+    --blue1: #8fb3c9;
+    --blue2: rgb(11, 124, 115);
+    --blue3: rgb(105, 194, 224);
+    --blue4: #7ca5c9;
+    --yellow: rgb(255, 197, 133);
+    --rose1: rgb(213, 156, 132);
+    --rose2: #dcaf9c;
+    --pastelBlue: rgb(139, 211, 230)
+}
+
+@font-face {
+    font-family: 'lequire outline';
+    src: url('https://dl.dropbox.com/s/s3dpawqzgr54vm6/lequire_outline-webfont.woff2?dl=0') format('woff2'), url('https://dl.dropbox.com/s/i3x5p2sp47najkg/lequire_outline-webfont.woff?dl=0') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ambo';
+    src: url('https://dl.dropbox.com/s/0u3ogqn22l87wbs/ambo__free_ttf_font__by_loosy-d4wz0ug-webfont.woff2?dl=0') format('woff2'), url('https://dl.dropbox.com/s/8jsb3sc6ilk9vyp/ambo__free_ttf_font__by_loosy-d4wz0ug-webfont.woff?dl=0') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'kiona';
+    src: url('https://dl.dropbox.com/s/9eky6ml4wqyragu/kiona-regular-webfont.woff2?dl=0') format('woff2'), url('https://dl.dropbox.com/s/o4omys8coh1345m/kiona-regular-webfont.woff?dl=0') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lemon yellow';
+    src: url('https://dl.dropbox.com/s/0j90aemu83bg3cw/dk_lemon_yellow_sun-webfont.woff2?dl=0') format('woff2'), url('https://dl.dropbox.com/s/cz4kkcihywgyeoz/dk_lemon_yellow_sun-webfont.woff?dl=0') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nurito';
+    src: url('https://dl.dropbox.com/s/f7aej22leo0dl8m/nunito-regular-webfont.woff2') format('woff2'), url('https://dl.dropbox.com/s/tq888m16n5h5911/nunito-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nunito';
+    src: url('https://dl.dropbox.com/s/my10cwjrnzhhs6u/nunito-italic-webfont.woff2') format('woff2'), url('https://dl.dropbox.com/s/7x1krn11rcik0zy/nunito-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'nurito';
+    src: url('https://dl.dropbox.com/s/7tfdxt54ywe1uzq/nunito-bold-webfont.woff2') format('woff2'), url('https://dl.dropbox.com/s/3x0p6z2uf4t0nuz/nunito-bold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nurito';
+    src: url('https://wwdlw.dropbox.com/s/fnt63om4m3yldyu/nunito-bolditalic-webfont.woff2') format('woff2'), url('https://dl.dropbox.com/s/6vcm2v5kzur4h1i/nunito-bolditalic-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'nurito';
+    src: url('https://dl.dropbox.com/s/nspq146mjtlut3s/nunito-black-webfont.woff2') format('woff2'), url('https://dl.dropbox.com/s/2u04w927yjpgntl/nunito-black-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nurito';
+    src: url('https://dl.dropbox.com/s/91ys3e7xzqlbthe/nunito-blackitalic-webfont.woff2') format('woff2'), url('https://dl.dropbox.com/s/wy0k1ose6qatn4g/nunito-blackitalic-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'nurito';
+    src: url('https://dl.dropbox.com/s/h3qvo35dtpfjgrv/nunito-extralight-webfont.woff2') format('woff2'), url('https://dl.dropbox.com/s/e0s90tlqeb1yva7/nunito-extralight-webfont.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nurito';
+    src: url('https://dl.dropbox.com/s/7kr9g8hn18mwmym/nunito-extralightitalic-webfont.woff2') format('woff2'), url('https://dl.dropbox.com/s/lijngngvs5pgrz5/nunito-extralightitalic-webfont.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'shorelines';
+    src: url('https://dl.dropbox.com/s/vmmz30a3dk24pwy/shorelines_script_bold-webfont.woff2?dl=0') format('woff2'), url('https://dl.dropbox.com/s/lxu4ogpq5a29jci/shorelines_script_bold-webfont.woff?dl=0') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'amelia';
+    src: url('https://files.jcink.net/uploads/dancing/Amelia_Script.otf');
+}
+
+
+#ths-wallpaper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    position: fixed;
+    z-index: 0;
+    overflow: hidden;
+}
+
+#ths-wallpaper:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    content: "";
+    background: -webkit-gradient(linear, left top, right bottom, from(rgba(220, 179, 127, 0.4)), to(rgba(11, 124, 115, .8))), url('https://i.ibb.co/jRdR0cD/header-2.jpg');
+    filter: blur(8px);
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+#ths-wallpaper1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    position: fixed;
+    z-index: 0;
+    overflow: hidden;
+}
+
+#ths-wallpaper1:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    content: "";
+    background: -webkit-gradient(linear, left top, right bottom, from(rgba(220, 179, 127, 0.4)), to(rgba(11, 124, 115, .8))), url('joj.png');
+    filter: blur(2px);
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+/*********** LISTE DES SUJETS ***********/
+
+.ths-topics-list {
+    position: relative;
+}
+
+/*** ENTÊTE ***/
+
+.ths-topics-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ths-topics-head {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.ths-topics-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.ths-topics-title h1 {
+    position: relative;
+    background: var(--gradient1);
+    border-radius: 20px;
+    height: 100px;
+    color: #fff;
+    font-family: Amelia;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-spacing: 10px;
+    z-index: 2;
+    font-size: 42px;
+    font-weight: normal;
+}
+
+.ths-topics-btns {
+    background: #fbfbfb;
+    border-radius: 30px;
+    height: 120px;
+    position: relative;
+    margin-top: -60px;
+    width: 55%;
+    display: flex;
+    margin-left: 120px;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 0 20px 15px;
+}
+
+.ths-topics-btns .tl-btn {
+    background-image: -webkit-linear-gradient(var(--green), var(--blue1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: .5;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+
+.ths-topics-btns .tl-btn:hover {
+    transform: scale(1.1);
+    opacity: .9;
+    transition: all ease 0.5s;
+}
+
+.ths-topics-btns:before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    height: 40px;
+    width: 40px;
+    top: 60px;
+    background-image: url(https://www.aht.li/3628046/svg-corner.svg);
+    background-size: cover;
+}
+
+/******* CORPS DE LA LISTE *******/
+.posts-header {
+    margin: 60px 0;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+.posts-header:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    content: "";
+    background: var(--gradient1);
+    opacity: .7;
+}
+
+.posts-header h2 {
+    position: relative;
+    color: #fff;
+    font-family: Nurito;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    padding: 10px;
+}
+
+
+/******* TOPIC LISTE *******/
+
+.ths-listed-topic {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.listop-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.listop-left .stats {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(234, 199, 167)), to(rgba(175, 199, 167)));
+    background-size: 150% 150%;
+    color: #fff;
+    box-shadow: 1px 1px 2px rgba(85, 85, 85, .4);
+    border-radius: 3px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.listop-mid {
+    background: #fbfbfb;
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    height: 130px;
+}
+
+.listop-mid:before {
+    content: "";
+    background: radial-gradient(rgba(234, 199, 167, .6), rgba(162, 192, 203, .6));
+    clip-path: circle(40.9% at 11% 100%);
+    position: absolute;
+    height: 185px;
+    width: 185px;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    border-bottom-left-radius: 20px;
+}
+
+.listop-mid:after {
+    content: "";
+    clip-path: circle(30.4% at 49% 100%);
+    z-index: 2;
+    background: -webkit-gradient(linear, left top, right bottom, from(rgba(234, 199, 167, .4)), to(rgba(175, 199, 167, .4)));
+    background: radial-gradient(rgba(175, 199, 167, .4), rgba(234, 199, 167, .4));
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    left: 30px;
+    bottom: 0;
+    z-index: 3;
+}
+
+.listop-gen {
+    flex: 1;
+    position: relative;
+    margin: 20px 0 20px 20px;
+    z-index: 4;
+    height: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #555;
+}
+
+.listop-title {
+    font-family: Nurito;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.listop-title b {
+    font-family: Playfair Display;
+    font-weight: normal;
+    opacity: .7;
+    font-size: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.listop-title a {
+    font-weight: 900;
+    font-size: 14px;
+    color: var(--blue4);
+    color: var(--rose2);
+}
+
+.listop-author {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-family: Karla;
+    letter-spacing: 1px;
+}
+
+.listop-author a {
+    font-weight: 900;
+    font-family: Nurito;
+    letter-spacing: .5;
+}
+
+.listop-desc {
+    width: 70%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 20px;
+    color: #fff;
+}
+
+.listop-desc:after {
+    content: "";
+    position: absolute;
+    left: -40px;
+    height: 40px;
+    width: 40px;
+    top: 0;
+    background-image: url(https://www.aht.li/3638140/topic-list-svg.svg);
+    background-size: cover;
+}
+
+.listop-desc:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: var(--gradient1);
+    opacity: .8;
+    border-bottom-left-radius: 20px;
+}
+
+.listop-desc div {
+    position: relative;
+    overflow: auto;
+    padding-right: 5px;
+    font-size: 11px;
+    text-align: justify;
+    margin: 15px;
+}
+
+.listop-right {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 15px;
+    width: 23%;
+    margin-left: 20px;
+}
+
+.listop-right:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: .7;
+    background: var(--gradient1);
+}
+
+.listop-right1 {
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    border-radius: 20px;
+    padding: 15px;
+    width: 105%;
+    margin: 250px auto;
+}
+
+.listop-right1:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: .7;
+    background: var(--gradient1);
+}
+
+.sub-ava {
+    position: relative;
+    background: var(--gradient1);
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20%;
+}
+
+#last-ava {
+    border: 4px solid #fff;
+    border-radius: 100%;
+    height: 80px;
+    width: 80px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px
+}
+
+#last-ava img {
+    width: 100%;
+}
+
+.last-sub-post {
+    position: relative;
+    margin-left: 15px;
+    color: #fff;
+    font-family: Karla;
+    text-transform: uppercase;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.last-sub-post strong {
+    font-family: Nurito;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+
+
+/**** COULEUR EN FONCTION DES GROUPES ****/
+
+.colorpnj .listop-right:before,
+.colorpnj .sub-ava {
+    background: var(--gradientPnj)
+}
+
+.colornat .listop-right:before,
+.colornat .sub-ava {
+    background: var(--gradientNatif)
+}
+
+.colorvoy .listop-right:before,
+.colorvoy .sub-ava {
+    background: var(--gradientVoyageur)
+}
+
+.colorconf .listop-right:before,
+.colorconf .sub-ava {
+    background: var(--gradientConfrerie)
+}
+
+
+.colorpnj .listop-right1:before,
+.colorpnj .sub-ava {
+    background: var(--gradientPnj)
+}
+
+.colornat .listop-right1:before,
+.colornat .sub-ava {
+    background: var(--gradientNatif)
+}
+
+.colorvoy .listop-right1:before,
+.colorvoy .sub-ava {
+    background: var(--gradientVoyageur)
+}
+
+.colorconf .listop-right1:before,
+.colorconf .sub-ava {
+    background: var(--gradientConfrerie)
+}
+
+.response-buttons {
+    margin: auto;
+    gap: 150px;
+    margin-top: 20px;
+}
+
+.response-buttons button {
+    background-color: #D10056;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.response-buttons button:hover {
+    background-color: #B0004D;
+}
